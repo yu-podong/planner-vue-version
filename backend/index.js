@@ -1,11 +1,14 @@
 import express from 'express';
 import dotenv from  'dotenv';
-import { MongoClient } from 'mongodb';
+import pkg from 'mongodb';
+import mongoRouter from './db_router.js';
 dotenv.config();
 
 (async () => {
 	try {
 		/* MongoDB 접속 */
+		const { MongoClient } = pkg;
+
 		const db_client = new MongoClient(process.env.MONGODB_URL);
 		let _result = await db_client.connect();
 		console.log('db connect ok');
