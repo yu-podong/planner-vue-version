@@ -123,6 +123,13 @@
   /* monthPlanInput component에서는 안먹어서 여기서 뺐음 */
   .markdown-result ul {
     list-style: disc;
-    list-style-position:inside;
+    list-style-position: inherit;
+    margin-left: 20px;
+    padding-left: 10px;
   }
+
+  
+	input[type="checkbox" i]:disabled  {
+		background-color: blueviolet;
+	}
 </style>

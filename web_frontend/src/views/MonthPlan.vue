@@ -89,7 +89,7 @@ export default {
 
 	.monthPlan .month-list {
 		width: 100%;
-		height: 100%;
+		height: 95%;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -130,7 +130,7 @@ export default {
 
 	@media screen and (max-width: 1000px){
 		.monthPlan .month-list li {
-			width: 50%;
+			width: 49%;
 			height: 33%;
 			box-sizing: border-box;
 		}
@@ -143,7 +143,7 @@ export default {
 			border-right: 1px solid var(--gray-line-color);
 		}
 	}
-	@media screen and (max-width: 1000px){
+	@media screen and (max-width: 790px){
 		.monthPlan .month-list li {
 			width: 100%;
 			height: 33%;

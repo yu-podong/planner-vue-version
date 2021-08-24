@@ -30,7 +30,7 @@ export default {
 			// 올바른 값이 들어왔는지 확인
 			console.log(`eachMonthPlan : ${eachMonthPlan}`);
 			// content에 monthPlan의 return을 삽입하는 방법 모색중... -> 이렇게 하면 되네..ㅎ
-			this.content = eachMonthPlan;
+			/* this.content = eachMonthPlan; */
 			console.log(`this.content : ${this.content}`);
 			return eachMonthPlan;
 		},
@@ -80,9 +80,7 @@ export default {
 		},
 		// 작성한 달의 일정이 기존에 있었는지 판단하여 적절한 function 호출
 		checkWriting() {
-			this.isShowTextArea = false;
-			this.isShowResultArea = true;
-
+			
 			if(this.monthPlan == this.content) {	// No modifying
 				// Nothing to do...
 			}
@@ -95,6 +93,8 @@ export default {
 			else {	// 기존에 작성한 일정의 일부를 수정했을 때 
 				this.modifyMonthPlan();
 			}
+			this.isShowTextArea = false;
+			this.isShowResultArea = true;
 		},
 		// Morkdown editor에 필요한 함수
 		update() {
@@ -135,7 +135,7 @@ export default {
 		height: 100%;
 		vertical-align: top;
 		box-sizing: border-box;
-		padding: 0 20px;
+		padding: 20px;
 	}
 
 	.input-part div {
@@ -170,7 +170,6 @@ export default {
 		background-color: #f6f6f6;
 		font-size: 14px;
 		font-family: 'Noto Sans KR', sans-serif;
-		padding: 20px;
 	}
 
 	code {
